@@ -1,6 +1,6 @@
 import http from "../services/HttpService";
-
-const userApi = "/register";
+import config from "../config.json";
+const userApi = config.ApiUrl + "/register";
 
 export function register(user) {
   return http.post(userApi, {
