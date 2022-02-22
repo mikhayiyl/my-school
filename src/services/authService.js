@@ -1,9 +1,8 @@
 import jwtDecode from "jwt-decode";
 import HttpService from "./HttpService";
-import config from "../config.json";
 
-const authApi = config.ApiUrl + "/login";
-const userApi = config.ApiUrl + "/users";
+const authApi = "/login";
+const userApi = "/users";
 
 export function getUsers() {
   return HttpService.get(userApi);
