@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-axios.defaults.baseURL = process.env.REACT_APP_URL;
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 function setJwt(jwt) {
   axios.defaults.headers.common["x-auth-token"] = jwt;
 }
