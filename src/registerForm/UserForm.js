@@ -66,7 +66,7 @@ export class UserForm extends FormExtension {
       toast("Registered");
       window.location = "/success";
     } catch (error) {
-      if (error.response && error.response.status === 400) {
+      if (error.response && error.response.status === 409) {
         const errors = { ...this.state.errors };
         errors.name = error.response.data;
         toast.error(errors.name);

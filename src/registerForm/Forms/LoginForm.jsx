@@ -15,14 +15,8 @@ export default class LoginForm extends FormExtension {
   };
 
   schema = {
-    email: Joi.string()
-      .required()
-      .email()
-      .label("Email Address"),
-    password: Joi.string()
-      .required()
-      .min(6)
-      .label("Password"),
+    email: Joi.string().required().email().label("Email Address"),
+    password: Joi.string().required().min(6).label("Password"),
   };
 
   async doSubmit() {
@@ -31,11 +25,13 @@ export default class LoginForm extends FormExtension {
       toast("Success");
       // window.location = "/";
     } catch (error) {
-      if (error.response && error.response.status === 400) {
+      if (error.response && error.response.status === 401) {
         const errors = { ...this.state.errors };
         errors.username = error.response.data;
         this.setState({ errors });
         toast.error(errors.username);
+      } else {
+        toast.error("Incorect Email Address");
       }
     }
   }
