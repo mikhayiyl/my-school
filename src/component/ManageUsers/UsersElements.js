@@ -22,4 +22,12 @@ export const InfoWrapper = styled.table`
   opacity: 0.9;
   border-radius: 10px;
   box-shadow: 0 0 30px orangered;
+
+  & th:nth-child(even) {
+    color: yellow;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 280px;
+  }
 `;

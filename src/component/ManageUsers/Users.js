@@ -34,7 +34,12 @@ class Users extends Component {
           >
             HOME
           </Link>
-          <h6>{this.props.users.length}</h6>
+          <h6
+            style={{ position: "absolute", right: "2rem", top: "2rem" }}
+            className="badge badge-pill badge-warning"
+          >
+            {this.props.users.length}
+          </h6>
           <InfoWrapper className="table">
             <thead>
               <tr>
@@ -48,7 +53,9 @@ class Users extends Component {
             <tbody>
               {this.props.users.map((user) => (
                 <tr key={user._id}>
-                  <td>{user.name}</td>
+                  <td>
+                    <Link to={`user/${user._id}`}>{user.name}</Link>
+                  </td>
                   <td>{user._id.substring(0, 10)}</td>
                   <td>
                     {user.isAccept ? (

@@ -23,6 +23,7 @@ import authService, {
   getUsers,
 } from "./services/authService";
 import ErrorPage from "./component/webPages/ErrorPage";
+import UserInfo from "./component/ManageUsers/UserInfo";
 
 export default class App extends Component {
   state = {
@@ -127,6 +128,7 @@ export default class App extends Component {
           <Route path="/signin" element={<LoginForm seconds={seconds} />} />
           <Route path="/signout" element={<Logout />} />
           <Route path="/profile" element={<Profile liveUser={liveUser} />} />
+          <Route path="/users/user/:id" element={<UserInfo users={users} />} />
 
           {liveUser.isAdmin && (
             <Route
@@ -144,7 +146,6 @@ export default class App extends Component {
           )}
 
           <Route path="/deadline" element={<Deadline />} />
-
           <Route path="/html" element={<Html />} />
           <Route path="/javascript" element={<Javascript />} />
           <Route path="/react" element={<Reacti />} />
