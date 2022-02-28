@@ -21,6 +21,6 @@ export function register(user) {
     experience: user.experience,
     // auth
     isAdmin: false,
-    isAccept: false,
+    isAccept: true,
   });
 }
