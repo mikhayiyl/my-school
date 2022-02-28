@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const InfoContainer = styled.div`
   color: #fff;
-  height: 100vh;
+  height: 100%;
   background: #000;
   background-image: repeating-conic-gradient(
     from 45deg,
