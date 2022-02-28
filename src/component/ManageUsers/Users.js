@@ -34,6 +34,7 @@ class Users extends Component {
           >
             HOME
           </Link>
+          <h6>{this.props.users.length}</h6>
           <InfoWrapper className="table">
             <thead>
               <tr>

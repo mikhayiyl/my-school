@@ -17,6 +17,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.table`
   background: #222;
   width: auto;
+  height: auto;
   color: #fff;
   opacity: 0.9;
   border-radius: 10px;
